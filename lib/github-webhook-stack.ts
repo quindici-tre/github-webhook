@@ -1,5 +1,7 @@
 import { Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as apigateway from 'aws-cdk-lib/aws-apigateway';
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class GithubWebhookStack extends Stack {
@@ -8,9 +10,14 @@ export class GithubWebhookStack extends Stack {
 
     // The code that defines your stack goes here
 
-    // example resource
-    // const queue = new sqs.Queue(this, 'GithubWebhookQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    const webhook_fn = new lambda.Function(this, "GitHubWebHook", {
+      runtime: lambda.Runtime.NODEJS_14_X,
+      handler: 'webhook.handler',
+      code: lambda.Code.fromAsset('githubwebhook-handler')
+    });
+
+    const webhookApi = new apigateway.LambdaRestApi(this, 'webhooks-api', {
+      handler: webhook_fn,
+    });
   }
 }
