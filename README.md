@@ -15,7 +15,7 @@ The AWS Lambda will respond by sending API requests to GitHub to add branch prot
 
 # Miro Board for Workshop
 
-[Protecting Developer Productivity](https://miro.com/app/board/uXjVOQr8LDA=/?invite_link_id=208702551612)
+[Protecting Developer Productivity](https://miro.com/app/board/uXjVOQr8LDA=/?moveToWidget=3458764519860687371&cot=14)
 
 # Manual Steps
 
