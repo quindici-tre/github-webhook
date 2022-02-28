@@ -13,6 +13,9 @@ The AWS Lambda will respond by sending API requests to GitHub to add branch prot
 2. A GitHub account
 3. An SSM Parameter named `githubtoken` created as a SecureString
 
+# Miro Board for Workshop
+
+[Protecting Developer Productivity](https://miro.com/app/board/uXjVOQr8LDA=/?invite_link_id=208702551612)
 
 # Manual Steps
 
