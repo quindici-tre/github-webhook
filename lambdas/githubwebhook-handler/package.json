@@ -11,7 +11,7 @@
   "dependencies": {
     "@aws-sdk/client-ssm": "^3.53.0",
     "@octokit/core": "^3.5.1",
-    "aws-sdk": "^2.1082.0",
+    "aws-sdk": "^2.1087.0",
     "node-fetch": "^3.2.0"
   }
 }
